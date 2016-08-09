@@ -1,0 +1,139 @@
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td{font-family:Arial, Helvetica, sans-serif;margin:0px; padding:0px; }
+body {font-size: 11px}
+table{ border-collapse:collapse; border-spacing:0px; }
+tr{ vertical-align:top; }
+fieldset, img{ border:0px; }
+abbr, acronym{ border:0px; }
+address, caption, cite, code, dfn, th, var{ font-style:normal; font-weight:normal; }
+h1, h2, h3, h4, h6{ font-size:100%; font-weight:normal; }
+h5{font-size:10px;padding:0px;margin:0px;}
+ol, ul{ list-style:none; }
+caption, th{ text-align:left; }
+.clear{ clear:both; }
+.right{ float:right; }
+.left{ float:left; }
+.aligncenter{ display:block; margin-left:auto; margin-right:auto; margin-bottom:10px; }
+em {font-style: italic}
+strong { font-weight: bold}
+a , a:visited , a:hover{ text-decoration: none }
+.left {float: left}
+.right {float: right}
+
+@font-face {
+	font-family: Bebas;
+	src: url('font/BebasNeue.otf');
+}
+
+body { background: url('image/bg.png') }
+#wrapper { margin: 0 auto; }
+#head { margin: 0 auto; width: 960px; padding-top: 5px; position: relative}
+.logo { width: 539px; height: 134px; display: block; background: url('image/logo.gif'); margin: 0 auto;}
+.ipang { width: 569px; height: 427px; display: block; background: url('image/ipang.png'); margin: -15px auto;}
+#up { margin: 0 auto;} 
+#menu{ font-family: Bebas; font-size: 36px; width: 100%; height: 40px; background: white; text-align: center;  display: block}
+#menu a {color: #555555;}
+#menu a:visited { color: #555555 }
+#menu a:hover { color: black }
+#down {z-index:1; position: relative; -webkit-box-shadow: 0px -1px 5px rgba(50, 50, 50, 0.2);-moz-box-shadow:0px -1px 5px rgba(50, 50, 50, 0.2);box-shadow:0px -1px 5px rgba(50, 50, 50, 0.2); background: white}
+#menu2{  font-size: 20px; width: 100%; height: 50px; background: url('image/bayang.png') no-repeat center top; text-align: center; color: #555555}
+#menu2 a {color: #555555;}
+#menu2 a:visited { color: #555555 }
+#menu2 a:hover { color: black }
+#menu2 ul { display: block; width: 360px; height: 50px; margin: 0 auto; text-align: center; padding-top: 5px}
+#menu2 li { font-family: Bebas; float: left; margin-right: 25px;}
+
+#present { width: 641px; height: 66px; margin: -20px auto; background: url(image/logo-bawah.gif) no-repeat center top; display: block}
+
+#panel {
+	background: white;
+	padding: 10px;
+	height: 390px;
+	width: 940px;
+	display: none;
+	position: absolute;
+	bottom: 0;
+	-webkit-box-shadow: 0px 0px 5px rgba(50, 50, 50, 0.25);
+	-moz-box-shadow:    0px 0px 5px rgba(50, 50, 50, 0.25);
+	box-shadow:         0px 0px 5px rgba(50, 50, 50, 0.25);
+	overflow-y: hide;
+}
+
+#panel-inv {
+	background: white;
+	padding: 10px;
+	height: 390px;
+	width: 940px;
+	display: none;
+	position: absolute;
+	bottom: 0;
+	-webkit-box-shadow: 0px 0px 5px rgba(50, 50, 50, 0.25);
+	-moz-box-shadow:    0px 0px 5px rgba(50, 50, 50, 0.25);
+	box-shadow:         0px 0px 5px rgba(50, 50, 50, 0.25);
+	overflow-y: hide;
+	text-align: center;
+}
+
+#panel-con {
+	background: white;
+	padding: 10px;
+	height: 390px;
+	width: 940px;
+	display: none;
+	position: absolute;
+	bottom: 0;
+	-webkit-box-shadow: 0px 0px 5px rgba(50, 50, 50, 0.25);
+	-moz-box-shadow:    0px 0px 5px rgba(50, 50, 50, 0.25);
+	box-shadow:         0px 0px 5px rgba(50, 50, 50, 0.25);
+	overflow-y: hide;
+	text-align: center;
+}
+
+#panel-ven {
+	background: white;
+	padding: 10px;
+	height: 390px;
+	width: 940px;
+	display: none;
+	position: absolute;
+	bottom: 0;
+	-webkit-box-shadow: 0px 0px 5px rgba(50, 50, 50, 0.25);
+	-moz-box-shadow:    0px 0px 5px rgba(50, 50, 50, 0.25);
+	box-shadow:         0px 0px 5px rgba(50, 50, 50, 0.25);
+	overflow-y: hide;
+	text-align: center;
+	
+}
+
+h3 {font-family: Bebas;	font-size: 32px;}
+
+#map { width: 640px; height: 300px; padding: 10px; 
+	-webkit-box-shadow: 3px 3px 5px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    3px 3px 5px rgba(50, 50, 50, 0.75);
+	box-shadow:         3px 3px 5px rgba(50, 50, 50, 0.75);	
+	overflow-y: hide;
+	border: 1px solid whitesmoke;
+	margin: 0 auto;
+	}
+
+
+#panel::-webkit-scrollbar { display: none; }
+
+#text {font-family: Bebas; font-size: 24px }
+#isi { width: 600px; margin: 10px auto ; height: 180px;}
+#box {width: 300px; text-align: center; display: none}
+#box-not {width: 300px; text-align: center; display: none}
+#box2 {width: 300px; text-align: center;  display: none}
+#box2-not {width: 300px; text-align: center;  display: none}
+
+#login { font-family: Bebas; text-align: center ; font-size: 30px}
+#login  a{ color: blue }
+#login  a:hover, a:visited { color: #555555 }
+
+#tweet { text-align: center; margin-left: 70px; margin-top: 20px; margin-bottom: 10px}
+
+#fieldset { width: 600px; height: 250px; margin: 10px auto ; padding: 10px; border: 1px solid #b9b9b9; }
+
+#panel-yes {text-align: center; font-family: Bebas; font-size: 38px; width: 800px; height: 390px; margin: 15px auto;background: white;padding: 10px; margin-bottom: 50px;-webkit-box-shadow: 0px 0px 5px rgba(50, 50, 50, 0.25);	-moz-box-shadow:    0px 0px 5px rgba(50, 50, 50, 0.25);	box-shadow:         0px 0px 5px rgba(50, 50, 50, 0.25);}
+#panel-no {vertical-align: middle;text-align: center; font-family: Bebas; font-size: 38px; width: 800px; height: 390px; margin: 15px auto;background: white;padding: 10px; margin-bottom: 50px;-webkit-box-shadow: 0px 0px 5px rgba(50, 50, 50, 0.25);	-moz-box-shadow:    0px 0px 5px rgba(50, 50, 50, 0.25);	box-shadow:         0px 0px 5px rgba(50, 50, 50, 0.25);}
+
+.but.active {color: #cb2a2a}

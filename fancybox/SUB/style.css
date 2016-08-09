@@ -1,0 +1,328 @@
+@charset "utf-8";
+/* CSS Document */
+	body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td{font-family:Arial, 	Helvetica, sans-serif;margin:0px; padding:0px; }
+	table{ border-collapse:collapse; border-spacing:0px; }
+	tr{ vertical-align:top; }
+	fieldset, img{ border:0px; }
+	abbr, acronym{ border:0px; }
+	address, caption, cite, code, dfn,th, var{ font-style:normal; font-weight:normal; }
+	h1, h2, h3, h4, h6{ font-size:100%; font-weight:normal; }
+	h5{font-size:10px;padding:0px;margin:0px;}
+	ol, ul{ list-style:none; }
+	caption, th{ text-align:left; }
+	a, a:hover, a:visited {text-decoration:none}
+	p { margin-bottom: 10px}
+	.clear{ clear:both; }
+	.right{ float:right; }
+	.left{ float:left; }
+	.aligncenter{ display:block; margin-left:auto; margin-right:auto; margin-bottom:10px; }
+	em {font-style:italic}
+	strong {font-weight: bold}
+
+	body { background: url('images/bg.jpg') no-repeat center center fixed; 
+ 	 -webkit-background-size: cover;
+  	-moz-background-size: cover;
+ 	 -o-background-size: cover;
+ 	 background-size: cover;
+	 }
+	
+	
+	#wrapper { max-width: 960px; background: white ;margin: 0 auto; padding-bottom: 20px; position:relative}
+    #header {
+       max-width: 960px;
+	   margin: 0 auto;
+     }
+	 #menu{
+		 width: 100%;
+		 background: #8d0751;
+		 text-align: center;
+		 position:fixed;
+		 bottom: 0;
+		 z-index: 100;
+		 max-width: 960px;
+	 }
+	 #menu li {
+		 display:inline-block;
+		 padding: 15px;
+		 text-transform: uppercase;
+	 }
+	 #menu li a{
+		color: white;
+		font-weight: bold;
+		font-family: 'Oswald', sans-serif;	 
+		letter-spacing: 1px;
+		margin-left: 20px;
+		margin-right: 20px;
+	 }
+	 
+	 #layout {
+	 	margin: 0 auto;
+		padding: 10px 0 30px 0;
+		text-align: center;
+		min-height: 630px;
+	 }
+	 
+	 #layout h2 {
+		color: white;
+		font-weight: bold;
+		font-family: 'Oswald', sans-serif;	 
+		letter-spacing: 1px;
+		padding: 10px 30px 10px 30px;
+		background: #8d0751;
+		max-width: 250px;
+		display:block;
+		margin: 0 auto
+	 }
+	 
+	  #videos {
+	 	margin: 0 auto;
+		padding: 10px 0 30px 0;
+		text-align: center;
+		min-height: 630px;
+	 }
+	 
+	 #videos h2 {
+		color: white;
+		font-weight: bold;
+		font-family: 'Oswald', sans-serif;	 
+		letter-spacing: 1px;
+		padding: 10px 30px 10px 30px;
+		background: #8d0751;
+		max-width: 250px;
+		display:block;
+		margin: 0 auto
+	 }
+	 
+	  #ticket {
+	 	margin: 0 auto;
+		padding: 10px 0 30px 0;
+		text-align: center;
+		min-height: 630px;
+	 }
+	 
+	 #ticket h2 {
+		color: white;
+		font-weight: bold;
+		font-family: 'Oswald', sans-serif;	 
+		letter-spacing: 1px;
+		padding: 10px 30px 10px 30px;
+		background: #8d0751;
+		max-width: 250px;
+		display:block;
+		margin: 0 auto
+	 }
+	 
+	 #dates {
+	 	margin: 0 auto;
+		padding: 10px 0 30px 0;
+		text-align: center;
+		min-height: 630px;
+	 }
+	 #terms {
+		 width:800px;
+		 font-size: 14px;
+		 line-height: 1.5em;
+	 }
+	 
+	 #terms p{
+		 padding: 10px;
+	 }
+	 
+	  #terms h2{
+		color: white;
+		font-weight: bold;
+		font-family: 'Oswald', sans-serif;	 
+		letter-spacing: 1px;
+		padding: 10px 30px 10px 30px;
+		background: #8d0751;
+		max-width: 250px;
+		display:block;
+		margin: 0 auto;
+		text-align: center;
+	 }
+	 
+	  #mandiri {
+		 width:800px;
+		 font-size: 14px;
+		 line-height: 1.5em;
+	 }
+	 
+	 #tata {
+		 width:800px;
+		 font-size: 14px;
+		 line-height: 1.5em;
+	 }
+	 
+	 #tata p{
+		 padding: 10px;
+	 }
+	 
+	 #tata li{
+	 list-style-type:decimal;
+	 }
+	 
+	 #tatak {
+		 width:800px;
+		 font-size: 14px;
+		 line-height: 1.5em;
+	 }
+	 
+	 #tatak p{
+		 padding: 10px;
+	 }
+	 
+	 #tatak li{
+	 list-style-type:decimal;
+	 }
+	 
+	 #switch{
+		position: absolute;
+		top: 30px;
+		left: 20px;	 
+	 }
+	 
+	  #tata h2{
+		color: white;
+		font-weight: bold;
+		font-family: 'Oswald', sans-serif;	 
+		letter-spacing: 1px;
+		padding: 10px 30px 10px 30px;
+		background: #8d0751;
+		max-width: 250px;
+		display:block;
+		margin: 0 auto;
+		text-align: center;
+	 }
+	 
+	  #tatak h2{
+		color: white;
+		font-weight: bold;
+		font-family: 'Oswald', sans-serif;	 
+		letter-spacing: 1px;
+		padding: 10px 30px 10px 30px;
+		background: #8d0751;
+		max-width: 250px;
+		display:block;
+		margin: 0 auto;
+		text-align: center;
+	 }
+	 
+	 
+	 #dates h2 {
+		color: white;
+		font-weight: bold;
+		font-family: 'Oswald', sans-serif;	 
+		letter-spacing: 1px;
+		padding: 10px 30px 10px 30px;
+		background: #8d0751;
+		max-width: 250px;
+		display:block;
+		margin: 0 auto
+	 }
+	 
+	  #contact {
+	 	margin: 0 auto;
+		padding: 10px 0 30px 0;
+		text-align: center;
+		min-height: 630px;
+	 }
+	 
+	 #contact h2 {
+		color: white;
+		font-weight: bold;
+		font-family: 'Oswald', sans-serif;	 
+		letter-spacing: 1px;
+		padding: 10px 30px 10px 30px;
+		background: #8d0751;
+		max-width: 250px;
+		display:block;
+		margin: 0 auto
+	 }
+	 
+	  #event {
+	 	margin: 0 auto;
+		padding: 10px 0 30px 0;
+		text-align: center;
+		min-height: 630px;
+	 }
+	 
+	 #event h2 {
+		color: white;
+		font-weight: bold;
+		font-family: 'Oswald', sans-serif;	 
+		letter-spacing: 1px;
+		padding: 10px 30px 10px 30px;
+		background: #8d0751;
+		max-width: 250px;
+		display:block;
+		margin: 0 auto
+	 }
+	 
+	 .vid {
+	 	margin-top: 20px;
+		margin-bottom: 20px;
+		
+	 }
+	 
+	 .vid li{
+		max-width: 300px;
+	 	display: inline-block;
+		margin: 5px;
+		font-weight: bold
+	 }
+	 
+	 .vid li a{
+	 	color: black;
+	 }
+	 
+	 .spon {
+	 	padding: 20px;
+		width: 100%;
+		
+	 }
+	 
+	 .spon li{
+		
+	 	display: inline-block;
+		font-weight: bold
+	 }
+	 
+	 .anounce {
+		 font-weight: bold;
+		font-family: 'Oswald', sans-serif;	 
+		padding: 50px;
+		line-height: 2em;
+		letter-spacing: 1px;
+	 }
+	 
+	 .fixed {
+    position:fixed;
+ 	margin: 0 auto;
+	}
+	
+	.price {
+		padding: 20px;
+		max-width: 450px;
+	}
+	
+	.tc {
+		padding: 20px;
+		max-width: 430px;
+		width: 100%;		
+	}
+	
+	.tc a{
+		
+		min-height: 50px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		display: block;
+		margin: 30px auto;	
+	}
+	
+	.maps {
+		background:white;
+		padding: 5px;
+		border: 1px solid whitesmoke;
+	}
+	 
